@@ -49,7 +49,7 @@ public class TaxCalculator implements ITaxCalculator<Employee>{
 
     @Override
     public double raiseSalary(Employee employee){
-        int year = LocalDate.now().getYear();
+        int year = LocalDate.now().getYear() - 1;
 
         if(!employeeIValidator.hireYearValidator(employee)){
             throw new DateTimeException("Girilen Tarih formatı istenilen aralıkta değil! <1900 - Bugün>");
